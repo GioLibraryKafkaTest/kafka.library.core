@@ -20,7 +20,7 @@ jobs:
           dotnet-version: '9.0'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore src/LibraryEngine/library.core.domain/library.core.domain.csproj
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
