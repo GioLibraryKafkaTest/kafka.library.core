@@ -19,8 +19,14 @@ jobs:
         with:
           dotnet-version: '9.0'
 
+      - name: Print working directory
+        run: pwd
+
+      - name: List files
+        run: ls -R
+
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore src/LibraryEngine/library.core.domain/library.core.domain.csproj
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
